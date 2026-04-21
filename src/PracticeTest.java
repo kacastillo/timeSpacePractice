@@ -37,4 +37,39 @@ public void testTimeEfficientEven() {
   // In this case, there is a tie between 1, 2, and 3, but 1 shows frst -> return 1
   assertEquals(1, result);
 }
+
+
+
+// tests for mostCommonSpaceEfficient
+
+@Test
+public void testSpaceEfficientOneElement() {
+  // Arrange
+  int[] nums = {4}; 
+  // Act
+  int result = Practice.mostCommonSpaceEfficient(nums);
+  // Assert | 4 shows up once so return 4
+  assertEquals(4, result);
 }
+
+@Test
+public void testSpaceEfficientMultipleElements() {
+  // Arrange
+  int[] nums = {1,4,4,4,5,5};
+  // Act
+  int result = Practice.mostCommonSpaceEfficient(nums);
+  // Assert | 4 shows up 3 times, 5 only shows up twice,
+  assertEquals(4, result);
+}
+
+@Test
+public void testSpaceEfficientEven() {
+  //Arrange
+  int[] nums = {1, 2, 3, 2, 1, 3};
+  // Act
+  int result = Practice.mostCommonSpaceEfficient(nums);
+  // Assert | there is a tie between 1, 2, and 3, but 1 shows frst so return 1
+  assertEquals(1, result); // return 1
+  }
+}
+
