@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class Practice {
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: o(n) n = array.length
+  // Space Complexity: o(n) n = number of even integers in array  
   // Remember to define your variables!
   public static List<Integer> findEvens(int[] array) {
     List<Integer> evens = new ArrayList<>();
@@ -20,8 +20,8 @@ public class Practice {
   }
 
   // Assume a rectangular array where #rows <= #cols
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: o(n) n = matrix.length
+  // Space Complexity: o(1)
   // Remember to define your variables!
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
@@ -32,8 +32,8 @@ public class Practice {
   }
   
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity: o(n) n = length of the array
+  // Space Complexity: o(1)
   // Remember to define your variables!
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
     Map<T, Integer> frequencies = new HashMap<>();
@@ -43,8 +43,8 @@ public class Practice {
     return frequencies;
   }
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity: o(n) n = length of the array
+  // Space Complexity: o(n) n = number of even integers in the range
   // Remember to define your variables!
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
@@ -54,8 +54,8 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: o(n^2) n = entry of the map
+  // Space Complexity: o(n)
   // Remember to define your variables!
   public static List<Integer> concatVals(Map<Integer, List<Integer>> map) {
     List<Integer> result = new ArrayList<>();
@@ -68,8 +68,8 @@ public class Practice {
     return result;
   }
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: o(1) n=char c
+  // Space Complexity: o(1)
   // Remember to define your variables!
   public static List<Character> septuple(char c) {
     List<Character> result = new ArrayList<>();
@@ -79,8 +79,8 @@ public class Practice {
     return result;
   }
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: o(r*c)r= rows, c = col
+  // Space Complexity: o(r*c)
   // Remember to define your variables!
   public static char[][] initCharRect(int rows, int cols) {
     return new char[rows][cols];
@@ -88,8 +88,8 @@ public class Practice {
 
   // Assume all strings in strs are of length s
   // Hint: charAt is an O(1) operation in both time and space
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: o(n*s) n = number of strings, s = length of string
+  // Space Complexity:  o(n*s)
   // Remember to define your variables!
   public static List<Character> concatStrings(List<String> strs) {
     List<Character> concat = new ArrayList<>();
@@ -101,8 +101,8 @@ public class Practice {
     return concat;
   }
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: o(1) n = input n, a, b, c, d
+  // Space Complexity: o(1) 
   // Remember to define your variables!
   public static int cubic(int n, int a, int b, int c, int d) {
     int result = d;
