@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Practice {
 
-  // Time Complexity:
+  // Time Complexity: 
   // Space Complexity:
   // Remember to define your variables!
   public static List<Integer> findEvens(int[] array) {
@@ -20,8 +20,8 @@ public class Practice {
   }
 
   // Assume a rectangular array where #rows <= #cols
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: 
+  // Space Complexity:
   // Remember to define your variables!
   public static int sumDiagonal(int[][] matrix) {
     int sum = 0;
@@ -33,7 +33,7 @@ public class Practice {
   
 
   // Time Complexity: 
-  // Space Complexity: 
+  // Space Complexity:  
   // Remember to define your variables!
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
     Map<T, Integer> frequencies = new HashMap<>();
@@ -43,8 +43,8 @@ public class Practice {
     return frequencies;
   }
 
-  // Time Complexity: 
-  // Space Complexity: 
+  // Time Complexity: ()
+  // Space Complexity:
   // Remember to define your variables!
   public static List<Integer> evensToSquare(int n) {
     List<Integer> evens = new ArrayList<>();
@@ -54,7 +54,7 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
+  // Time Complexity: 
   // Space Complexity:
   // Remember to define your variables!
   public static List<Integer> concatVals(Map<Integer, List<Integer>> map) {
@@ -69,7 +69,7 @@ public class Practice {
   }
 
   // Time Complexity:
-  // Space Complexity:
+  // Space Complexity: 
   // Remember to define your variables!
   public static List<Character> septuple(char c) {
     List<Character> result = new ArrayList<>();
@@ -89,7 +89,7 @@ public class Practice {
   // Assume all strings in strs are of length s
   // Hint: charAt is an O(1) operation in both time and space
   // Time Complexity:
-  // Space Complexity:
+  // Space Complexity: 
   // Remember to define your variables!
   public static List<Character> concatStrings(List<String> strs) {
     List<Character> concat = new ArrayList<>();
@@ -101,7 +101,7 @@ public class Practice {
     return concat;
   }
 
-  // Time Complexity:
+  // Time Complexity: 
   // Space Complexity: 
   // Remember to define your variables!
   public static int cubic(int n, int a, int b, int c, int d) {
@@ -122,16 +122,31 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity: O(n) n = nums.length
+   * Space Complexity: O(n) 
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
    */
   public static int mostCommonTimeEfficient(int[] nums) {
-    // TODO: Complete this method with an implementation that runs
+    // Complete this method with an implementation that runs
     // in O(n) time. n = nums.length
-    return -1;
+    HashMap<Integer, Integer> count = new HashMap<>();
+    for (int num : nums) {
+      //counting frequencies of each number in the array
+      count.put(num, count.getOrDefault(num, 0) + 1);
+    }
+    
+    int maxCount = 0;
+    int mostCommon = nums[0];
+    // find the number with the highest frequency
+    for (int num : nums) {
+      if (count.get(num) > maxCount) {
+        maxCount = count.get(num);
+        mostCommon = num;
+      }
+    }
+    return mostCommon;
   }
 
   /**
